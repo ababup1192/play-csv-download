@@ -20,7 +20,7 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents)
       {
 
         import CSVUtil._
-        val csvResult = CSVUtil.createCSVStream(
+        val csvResult = CSVUtil.createCSV(
           CSVHeader("文字列", "Option[文字列]", "CSV in CSV", "数値", "日付", "時間"),
           CSVRow(
             "文字列".asCSV,

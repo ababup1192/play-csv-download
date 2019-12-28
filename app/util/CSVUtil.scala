@@ -11,7 +11,7 @@ import akka.util.ByteString
 import org.apache.commons.csv.CSVFormat
 
 object CSVUtil {
-  def createCSVStream(header: CSVHeader, rows: CSVRow*): CSVResult = {
+  def createCSV(header: CSVHeader, rows: CSVRow*): CSVResult = {
 
     val tempFile = File.createTempFile("test", ".csv", null)
     val writer = Files.newBufferedWriter(tempFile.toPath)
